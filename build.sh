@@ -14,7 +14,16 @@ RELEASE="$(rpm -E %fedora)"
 wget https://pkgs.tailscale.com/stable/fedora/tailscale.repo -P /etc/yum.repos.d/
 
 # this installs a package from fedora repos
-rpm-ostree install  tailscale  mc fish lutris steam borgbackup  restic 
+rpm-ostree install \
+           tailscale \
+           mc \
+           fish \
+           lutris \
+           steam \
+           borgbackup \
+           restic \
+           sushi
+           
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
@@ -22,3 +31,4 @@ rpm-ostree install  tailscale  mc fish lutris steam borgbackup  restic
 #### Example for enabling a System Unit File
 
 #systemctl enable podman.socket
+systemctl enable tailscaled
