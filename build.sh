@@ -21,6 +21,7 @@ rpm-ostree install \
            lutris \
            steam \
            borgbackup \
+           borgmatic \
            restic \
            sushi
            
